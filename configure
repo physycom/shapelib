@@ -4137,7 +4137,7 @@ unknown)
 esac
 
 
-SHAPELIB_SO_VERSION=2:1:1
+SHAPELIB_SO_VERSION=2:1:0
 
 
 ac_ext=c
