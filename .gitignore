@@ -31,3 +31,15 @@
 # Debug files
 *.dSYM/
 *.su
+
+.deps/
+.libs/
+Makefile
+autom4te.cache/
+config.log
+config.status
+contrib/.deps/
+contrib/.libs/
+contrib/Makefile
+libtool
+shapelib.pc
