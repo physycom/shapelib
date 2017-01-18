@@ -1,3 +1,49 @@
+2016-12-06  Even Rouault  <even.rouault at spatialys.com>
+
+	* web/release.html, HOWTO-RELEASE, configure.ac, CMakeLists.txt: prepare
+	for 1.4.0 release.
+
+2016-12-05  Even Rouault  <even.rouault at spatialys.com>
+
+	* dbfopen.c, shapefil.h: write DBF end-of-file character 0x1A by default.
+	This behaviour can be controlled with the DBFSetWriteEndOfFileChar()
+	function.
+
+2016-12-05  Even Rouault  <even.rouault at spatialys.com>
+
+	* Major overhaul of Makefile build system to use autoconf/automake.
+        Contributed by Sandro Mani: https://github.com/manisandro/shapelib/tree/autotools
+
+	* Warning fixes in contrib/
+
+2016-12-04  Even Rouault  <even.rouault at spatialys.com>
+
+	* shpopen.c, dbfopen.c, shptree.c, shapefil.h: resync with
+	GDAL Shapefile driver. Mostly cleanups. SHPObject and DBFInfo
+	structures extended with new members. New functions:
+	DBFSetLastModifiedDate, SHPOpenLLEx, SHPRestoreSHX,
+	SHPSetFastModeReadObject
+
+	* sbnsearch.c: new file to implement original ESRI .sbn spatial
+	index reading. (no write support). New functions:
+	SBNOpenDiskTree, SBNCloseDiskTree, SBNSearchDiskTree,
+	SBNSearchDiskTreeInteger, SBNSearchFreeIds
+
+	* Makefile, makefile.vc, CMakeLists.txt, shapelib.def: updates
+	with new file and symbols.
+
+	* commit: helper script to cvs commit
+
+2013-11-26  Frank Warmerdam  <warmerdam@pobox.com>
+
+	* CMakeLists.txt: CMake support from Alan W. Irwin.
+
+	* dbfdump.c: untested reporting for deleted records.
+
+2012-04-10  Frank Warmerdam  <warmerdam@google.com>
+
+	* Shapelib 1.3.0 released.
+
 2012-01-27  Frank Warmerdam  <warmerdam@pobox.com>
 
 	* shptree.c: optimize quadtree generation (gdal #4472)
